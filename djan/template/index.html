@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<b>ชื่อบทความ : </b>{{ name }} <br>
+<b>ชื่อผู้แต่ง : </b>{{ lastname }} <br>
+
+<!-- การวนลูป -->
+
+<b>หมวดหมู่</b> <br>
+<ul>
+    {% for menu in tage %}
+    <li>{{ menu }}</li>
+    {% endfor %}
+</ul>
+
+<!-- การประกาศเงื่อนไข -->
+
+<b>ความนิยม : </b>
+{% if rating > 3 %}
+บทความนี้เป็นที่นิยม
+{% else %}
+บทความนี้ไม่เป็นที่นิยม
+{% endif %}
+
+{% endblock %}
