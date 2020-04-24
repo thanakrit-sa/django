@@ -4,5 +4,8 @@ from blogs import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.hello)
+    path('', views.hello),
+    path('on/', views.on),
+    path('writetopic/', views.writetopic),
+    path('addtopic',views.result)
 ]
