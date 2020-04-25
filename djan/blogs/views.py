@@ -1,17 +1,9 @@
 from django.shortcuts import render
+from django.contrib.auth.models import User
 # from django.http import HttpResponse
 
 
 def hello(request):
-    # catagory = ['น้ำตก', 'ภูเขา', 'ทะเล', 'ใกล้เมือง']
-    # rating = 4
-    # return render(request, 'index.html',
-    #               {
-    #                   'name': 'บทความการท่องเที่ยว',
-    #                   'lastname': 'ธนากฤต สหชาติชัย',
-    #                   'tage': catagory,
-    #                   'rating': rating
-    #               })
     return render(request,'index.html')
 
 
@@ -25,3 +17,24 @@ def result(request):
     name = request.POST['nametopic']
     description = request.POST['description']
     return render(request,'result.html',{'name':name,'description':description})
+
+def register(request):
+    return render(request,'register.html')
+
+def member(request):
+    username = request.POST['username']
+    firstname = request.POST['firstname']
+    lastname = request.POST['lastname']
+    email = request.POST['email']
+    password = request.POST['password']
+    repassword = request.POST['repassword']
+
+    user = User.objects.create_user(
+        username =username,
+        first_name =firstname,
+        last_name =lastname,
+        email =email,
+        password =password
+    )
+    user.save()
+    return render(request,'member.html')
