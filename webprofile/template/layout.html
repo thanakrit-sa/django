@@ -16,13 +16,33 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <style>
+        .dot {
+            height: 25px;
+            width: 25px;
+            background-color: #5bc0de;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 5px;
+        }
+        .dot2 {
+            height: 25px;
+            width: 25px;
+            background-color: #000000;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <br>
         <nav class="navbar navbar-expand-lg navbar-light bg">
-            <a class="navbar-brand" href="#"><h2>My Profile</h2></a>
+            <a class="navbar-brand" href="#">
+                <h2 class="text-info"><strong>My Profile</strong></h2>
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,11 +66,24 @@
             </div>
         </nav>
         <hr>
+        <br>
         {% block content %}
         {% endblock %}
+        <br>
         <hr>
-        <p align="center">Design By Thanakrit</p>
+        <div class="row">
+            <div class="col" align="left">
+                Design By Thanakrit Sahachatchai <br>
+                Update : {{date}}
+            </div>
+            <div class="col" align="right">
+                Python and Django Framework. <br>
+                <span class="dot"></span>
+                <span class="dot2"></span>
+            </div>
+        </div>
     </div>
+    <br>
 </body>
 
 </html>
