@@ -16,6 +16,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .dot {
             height: 25px;
@@ -25,12 +26,27 @@
             display: inline-block;
             margin: 5px;
         }
+
         .dot2 {
             height: 25px;
             width: 25px;
             background-color: #000000;
             border-radius: 50%;
             display: inline-block;
+            margin: 5px;
+        }
+
+        .btn-circle.btn-lg {
+            width: 50px;
+            height: 50px;
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.33;
+            border-radius: 25px;
+        }
+
+        a {
+            color: #5bc0de;
             margin: 5px;
         }
     </style>
@@ -73,16 +89,54 @@
         <hr>
         <div class="row">
             <div class="col" align="left">
-                Design By Thanakrit Sahachatchai <br>
-            </div>
-            <div class="col" align="right">
                 Python and Django Framework. <br>
                 <span class="dot"></span>
                 <span class="dot2"></span>
             </div>
+            <div class="col" align="right" style="padding-top: 0.5%;">
+                <a href="https://github.com/thanakrit-sa"><i class="fa fa-github-square" style="font-size:40px"></i></a>
+                <a href="https://www.facebook.com/thanaket.p"><i class="fa fa-facebook-square"
+                        style="font-size:40px"></i></a>
+                <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-envelope-square" style="font-size:40px"></i></a>
+            </div>
         </div>
     </div>
-    <br>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Contact</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-2 float-center" align="center">
+                            <i class="fa fa-envelope-square" style="font-size:50px"></i>
+                        </div>
+                        <div class="col-10" align="left">   
+                            <strong>Email</strong>
+                            <p>thanakrit.10197@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 float-center" align="center">
+                            <i class="fa fa-phone-square" style="font-size:50px"></i>
+                        </div>
+                        <div class="col-10" align="left">   
+                            <strong>Telephone</strong>
+                            <p>083-885-2052</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
