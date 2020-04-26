@@ -11,5 +11,7 @@ urlpatterns = [
     path('addtopic',views.result),
     path('register/',views.register),
     path('addmember',views.member),
-    path('member',views.showmember)
+    path('member',views.showmember),
+    path('login',views.login),
+    path('loginform',views.loginform)
 ]

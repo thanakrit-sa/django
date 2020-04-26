@@ -3,7 +3,9 @@
 {% block content %}
 
 {% for alert in messages %}
+<div class="alert alert-danger" role="alert">
     {{alert}}
+  </div>
 {% endfor %}
 
 <h4>ลงทะเบียน</h4>
