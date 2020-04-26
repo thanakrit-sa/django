@@ -1,29 +1,21 @@
 {% extends 'layout.html' %}
 
 {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for posts in post %}
 
-<h4>หน้าแรก</h4>
-<hr align="left" style="width: 10%; border: 1px solid black;">
+   {{posts.id}}
+   {{posts.name}}
+   {{posts.desc}}
 
-<!-- <b>ชื่อบทความ : </b>{{ name }} <br>
-<b>ชื่อผู้แต่ง : </b>{{ lastname }} <br> -->
-
-<!-- การวนลูป -->
-
-<!-- <b>หมวดหมู่</b> <br>
-<ul>
-    {% for menu in tage %}
-    <li>{{ menu }}</li>
     {% endfor %}
-</ul> -->
-
-<!-- การประกาศเงื่อนไข -->
-
-<!-- <b>ความนิยม : </b>
-{% if rating > 3 %}
-บทความนี้เป็นที่นิยม
-{% else %}
-บทความนี้ไม่เป็นที่นิยม
-{% endif %} -->
-
+</body>
+</html>
 {% endblock %}
